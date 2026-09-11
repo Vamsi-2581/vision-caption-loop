@@ -118,9 +118,9 @@ scripts/smoke.sh
 
 New to pull requests? Start at [first-commit-ai](https://github.com/primeodin/first-commit-ai), then come back.
 
-- [#1 — ASCII verify scorebar](https://github.com/primeodin/vision-caption-loop/issues/1) (after seeding)
-- [#2 — add a seventh scene](https://github.com/primeodin/vision-caption-loop/issues/2)
-- [#3 — `--strict` exit 1 when draft already passes](https://github.com/primeodin/vision-caption-loop/issues/3)
+- [#1 — ASCII verify scorebar in CLI text mode](https://github.com/primeodin/vision-caption-loop/issues/1)
+- [#2 — Add a seventh shop scene to SCENE_BANK](https://github.com/primeodin/vision-caption-loop/issues/2)
+- [#3 — Hand-worked verify example in docs/why-verify.md](https://github.com/primeodin/vision-caption-loop/issues/3)
 
 ## Daily build series
 
