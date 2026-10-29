@@ -53,6 +53,12 @@ SCENE_BANK: tuple[Scene, ...] = (
         must_tags=("wire", "nuts", "box"),
         shop_note="Name the fasteners (wire nuts) and the box — not 'electricity'.",
     ),
+    Scene(
+        id="water_heater_leak",
+        cues=("water heater", "drip at pressure relief valve", "wet drain pan", "copper discharge pipe"),
+        must_tags=("heater", "valve", "leak"),
+        shop_note="Name the leaking relief valve before guessing at the heater tank.",
+    ),
 )
 
 DEFAULT_SCENE_ID = "brake_pads"
