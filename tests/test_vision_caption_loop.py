@@ -52,6 +52,21 @@ def test_mock_refine_hits_all_tags():
     assert abs(verdict.score - 1.0) < 1e-9
 
 
+def test_water_heater_scene_refines_missing_tag():
+    scene = get_scene("water_heater_leak")
+    assert len(scene.cues) >= 3
+    assert len(scene.must_tags) == 3
+
+    cap = MockCaptioner()
+    draft = cap.caption(scene, draft=None)
+    draft_verdict = verify_caption(scene, draft)
+    assert draft_verdict.ok is False
+    assert scene.must_tags[-1] in draft_verdict.miss
+
+    final = cap.caption(scene, draft=draft)
+    assert verify_caption(scene, final).ok is True
+
+
 def test_verify_case_insensitive():
     scene = get_scene("breaker_panel")
     caption = "OPEN BREAKER PANEL with a TRIPPED handle"
